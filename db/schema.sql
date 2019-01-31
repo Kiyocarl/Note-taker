@@ -1,13 +1,12 @@
+DROP DATABASE IF EXISTS notes_db;
+CREATE DATABASE notes_db;
+USE notes_db;
 
-
-USE note_db;
-
-CREATE TABLE products(
-  id INT NOT NULL AUTO_INCREMENT,
-  item_id VARCHAR(10) NOT NULL,
-  product_name VARCHAR (100) NOT NULL,
-  department_name VARCHAR (01) NOT NULL,
-  price INT default 0,
-  stock_quantity INT default 0,
-  PRIMARY KEY (id)
+-- Create the notes table
+CREATE TABLE notes
+(
+ id INT NOT NULL AUTO_INCREMENT,
+ title VARCHAR (255) NOT NULL,
+ note VARCHAR (255) NOT NULL,
+ PRIMARY KEY(id)
 );
